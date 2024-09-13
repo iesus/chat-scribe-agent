@@ -1,72 +1,63 @@
-# Welcome to your GPT Engineer project
+# Chat Scribe Agent
 
-## Project info
+This project is a React-based web application that allows users to interact with a chatbot powered by an OpenAI LLM. The chatbot uses an agent in the background that can run scripts and interact with a PostgreSQL database.
 
-**Project**: chat-scribe-agent
+## Prerequisites
 
-**URL**: https://run.gptengineer.app/projects/fbb89441-978d-4bb7-b56f-a3fc36e4f595/improve
+- Node.js (version 14 or later)
+- npm (usually comes with Node.js)
 
-## How can I edit this code?
+## Getting Started
 
-There are several ways of editing your application.
+Follow these steps to run the application locally:
 
-**Use GPT Engineer**
+1. Clone the repository to your local machine:
+   ```
+   git clone <repository-url>
+   ```
 
-Simply visit the GPT Engineer project at [GPT Engineer](https://gptengineer.app/projects/fbb89441-978d-4bb7-b56f-a3fc36e4f595/improve) and start prompting.
+2. Navigate to the project directory:
+   ```
+   cd chat-scribe-agent
+   ```
 
-Changes made via gptengineer.app will be committed automatically to this repo.
+3. Install the project dependencies:
+   ```
+   npm install
+   ```
 
-**Use your preferred IDE**
+4. Start the development server:
+   ```
+   npm run dev
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in the GPT Engineer UI.
+5. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Project Structure
 
-Follow these steps:
+- `src/`: Contains the source code for the React application
+  - `components/`: React components used in the application
+  - `pages/`: Page components for different routes
+  - `lib/`: Utility functions and helpers
+- `public/`: Static assets
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Available Scripts
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+In the project directory, you can run:
 
-# Step 3: Install the necessary dependencies.
-npm i
+- `npm run dev`: Runs the app in development mode
+- `npm run build`: Builds the app for production
+- `npm run preview`: Serves the production build locally
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Notes
 
-**Edit a file directly in GitHub**
+- The current implementation uses a simulated response for the chatbot. To integrate with a real backend and OpenAI LLM, you'll need to update the `sendMessage` function in `src/components/ChatInterface.jsx`.
+- The PostgreSQL database integration is not yet implemented and will require additional backend setup.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contributing
 
-**Use GitHub Codespaces**
+Please read the CONTRIBUTING.md file for details on our code of conduct and the process for submitting pull requests.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-All GPT Engineer projects can be deployed directly via the GPT Engineer app.
-
-Simply visit your project at [GPT Engineer](https://gptengineer.app/projects/fbb89441-978d-4bb7-b56f-a3fc36e4f595/improve) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.gptengineer.app/tips-tricks/custom-domain/)
+This project is licensed under the MIT License - see the LICENSE.md file for details.
