@@ -17,27 +17,62 @@ Follow these steps to run the application on Windows:
    - Download and install the LTS (Long Term Support) version for Windows
    - Follow the installation wizard, accepting the default settings
 
-2. Clone the repository:
+2. Verify the installation:
+   - Open Command Prompt or PowerShell
+   - Run the following commands:
+     ```
+     node --version
+     npm --version
+     ```
+   - If both commands display version numbers, the installation was successful
+
+3. Clone the repository:
    ```
    git clone <repository-url>
    ```
 
-3. Navigate to the project directory:
+4. Navigate to the project directory:
    ```
    cd chat-scribe-agent
    ```
 
-4. Install the project dependencies:
+5. Install the project dependencies:
    ```
    npm install
    ```
 
-5. Start the development server:
+6. Start the development server:
    ```
    npm run dev
    ```
 
-6. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
+7. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
+
+## Troubleshooting
+
+If you encounter issues during the installation or running of the application, try the following:
+
+1. Ensure Node.js and npm are correctly installed:
+   - Restart your computer after installation
+   - Check if the PATH environment variable includes Node.js
+
+2. If `npm install` fails:
+   - Delete the `node_modules` folder and the `package-lock.json` file
+   - Run `npm cache clean --force`
+   - Try `npm install` again
+
+3. If you see permission errors:
+   - Run Command Prompt or PowerShell as Administrator
+
+4. If you encounter network-related issues:
+   - Check your internet connection
+   - If you're behind a proxy, configure npm to use it:
+     ```
+     npm config set proxy http://your-proxy-url:port
+     npm config set https-proxy http://your-proxy-url:port
+     ```
+
+5. If you still face issues, please provide the exact error message for further assistance.
 
 ## Project Structure
 
