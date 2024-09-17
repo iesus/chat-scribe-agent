@@ -4,24 +4,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Loader2 } from 'lucide-react';
+import { sendMessageToLLM } from '@/lib/api';
 
 const ChatInterface = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
-  const sendMessage = async (message) => {
-    // This is a placeholder for the actual API call
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ role: 'assistant', content: `Response to: ${message}` });
-      }, 1000);
-    });
-  };
-
   const mutation = useMutation({
-    mutationFn: sendMessage,
+    mutationFn: sendMessageToLLM,
     onSuccess: (data) => {
-      setMessages((prev) => [...prev, data]);
+      setMessages((prev) => [...prev, { role: 'assistant', content: data.response }]);
+    },
+    onError: (error) => {
+      console.error('Error from LLM:', error);
+      setMessages((prev) => [...prev, { role: 'assistant', content: 'Sorry, I encountered an error. Please try again.' }]);
     },
   });
 
