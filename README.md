@@ -4,34 +4,42 @@ This project is a React-based web application that allows users to interact with
 
 ## Prerequisites
 
-- Node.js (version 14 or later)
-- npm (usually comes with Node.js)
+- Windows 10 or later
+- [Bun](https://bun.sh/) (as an alternative to Node.js)
 
-## Getting Started
+## Getting Started (Windows)
 
-Follow these steps to run the application locally:
+Follow these steps to run the application on Windows:
 
-1. Clone the repository to your local machine:
+1. Install Bun:
+   - Open PowerShell as Administrator
+   - Run the following command:
+     ```
+     powershell -c "iwr bun.sh/install.ps1|iex"
+     ```
+   - Restart your terminal after installation
+
+2. Clone the repository:
    ```
    git clone <repository-url>
    ```
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
    ```
    cd chat-scribe-agent
    ```
 
-3. Install the project dependencies:
+4. Install the project dependencies:
    ```
-   npm install
-   ```
-
-4. Start the development server:
-   ```
-   npm run dev
+   bun install
    ```
 
-5. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
+5. Start the development server:
+   ```
+   bun run dev
+   ```
+
+6. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
 
 ## Project Structure
 
@@ -45,9 +53,9 @@ Follow these steps to run the application locally:
 
 In the project directory, you can run:
 
-- `npm run dev`: Runs the app in development mode
-- `npm run build`: Builds the app for production
-- `npm run preview`: Serves the production build locally
+- `bun run dev`: Runs the app in development mode
+- `bun run build`: Builds the app for production
+- `bun run preview`: Serves the production build locally
 
 ## Notes
 
