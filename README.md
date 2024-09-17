@@ -5,19 +5,17 @@ This project is a React-based web application that allows users to interact with
 ## Prerequisites
 
 - Windows 10 or later
-- [Bun](https://bun.sh/) (as an alternative to Node.js)
+- Node.js (version 14 or later)
+- npm (usually comes with Node.js)
 
 ## Getting Started (Windows)
 
 Follow these steps to run the application on Windows:
 
-1. Install Bun:
-   - Open PowerShell as Administrator
-   - Run the following command:
-     ```
-     powershell -c "iwr bun.sh/install.ps1|iex"
-     ```
-   - Restart your terminal after installation
+1. Install Node.js:
+   - Visit the official Node.js website: https://nodejs.org/
+   - Download and install the LTS (Long Term Support) version for Windows
+   - Follow the installation wizard, accepting the default settings
 
 2. Clone the repository:
    ```
@@ -31,12 +29,12 @@ Follow these steps to run the application on Windows:
 
 4. Install the project dependencies:
    ```
-   bun install
+   npm install
    ```
 
 5. Start the development server:
    ```
-   bun run dev
+   npm run dev
    ```
 
 6. Open your web browser and visit `http://localhost:5173` (or the URL provided in the terminal) to view the application.
@@ -53,9 +51,9 @@ Follow these steps to run the application on Windows:
 
 In the project directory, you can run:
 
-- `bun run dev`: Runs the app in development mode
-- `bun run build`: Builds the app for production
-- `bun run preview`: Serves the production build locally
+- `npm run dev`: Runs the app in development mode
+- `npm run build`: Builds the app for production
+- `npm run preview`: Serves the production build locally
 
 ## Notes
 
